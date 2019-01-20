@@ -6,9 +6,9 @@ Recent events such as the Cambridge Analytica scandal have prompted a heightened
 ## What it does
 When faced with an extensive terms and agreements page, users can simply paste the URL into our custom website. Using Microsoft Cognitive Services, the document is analysed and made available for users to query via the Privacy Expert Alexa skill. Example questions include:
 
-*Find the terms and conditions
-*Tell me about subscriptions
-*Give me details about content availability
+* Find the terms and conditions
+* Tell me about subscriptions
+* Give me details about content availability
 
 ## How we built it
 The custom website was built using Flask and accepts a URL input which then is sent to a Python backend script. The script makes an API call to QnA Maker on Microsoft Cognitive Services for extracting and generating Q&A pairs from the target URL. This result is then downloaded and processed using a DeepAI text summarisation API, before being uploaded back to a Cognitive Services knowledge base.
