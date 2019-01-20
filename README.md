@@ -20,3 +20,5 @@ To run the project first clone the github repository and then run the `applicati
 
 `git clone https://github.com/theo9921/privacy-expert.git && python ./privacy-expert/application.py` 
 
+This will spawn the website on http://localhost:5000/
+
