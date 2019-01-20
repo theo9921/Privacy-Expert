@@ -1,0 +1,35 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+{% endblock %}
+
+
+{% block title %}
+Privacy Expert AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+        <img src="{{ url_for('static', filename='logo2.png') }}">
+        <!--<h1>Welcome to Privacy Expert, your one-stop guide to complex service agreements!</h1>-->
+        
+        <p class="lead">Welcome to Privacy Expert, your one-stop guide to complex service agreements</p> 
+        
+
+        {{ wtf.quick_form(form) }}
+
+        <p class="space-above"><strong>{{ message }}</strong></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
