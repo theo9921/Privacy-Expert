@@ -95,7 +95,6 @@ def handle_fallback():
     session_attributes = {}
     card_title = "Fallback"
     speech_output = "The Privacy Expert skill can't help with that, but I can help you review the data policy uploaded on our website."
-    # Setting this to true ends the session and exits the skill.
     should_end_session = False
     reprompt_text = "Please tell me your query"
     return build_response(session_attributes, build_speechlet_response(
@@ -111,9 +110,6 @@ def answer_question(intent, session):
     speech_output = api_call(question_text) + ". " + reprompt_text  # Automatically followup with a reprompt
     should_end_session = False
 
-    # Setting reprompt_text to None signifies that we do not want to reprompt
-    # the user. If the user does not respond or says something that is not
-    # understood, the session will end.
     return build_response(session_attributes, build_speechlet_response(
         intent['name'], speech_output, reprompt_text, should_end_session))
 
@@ -133,7 +129,7 @@ def on_launch(launch_request, session):
     """
     print("on_launch requestId=" + launch_request['requestId'] +
           ", sessionId=" + session['sessionId'])
-    # Dispatch to your skill's launch
+
     return get_welcome_response()
 
 
@@ -166,7 +162,6 @@ def on_session_ended(session_ended_request, session):
     """
     print("on_session_ended requestId=" + session_ended_request['requestId'] +
           ", sessionId=" + session['sessionId'])
-    # add cleanup logic here
 
 
 # --------------- Main handler ------------------
