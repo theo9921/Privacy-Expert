@@ -16,4 +16,7 @@ The custom website was built using Flask and accepts a URL input which then is s
 The Alexa skill uses an AWS Lambda function which processes the QuestionIntent and identifies the Q&A pair most relevant to the query.
 
 ## Instructions to run
-To run the project first clone the github repository and then run the 'application.py' file
+To run the project first clone the github repository and then run the `application.py` file. First navigate to the directory you want to create the project and run
+
+`git clone https://github.com/theo9921/privacy-expert.git && python ./privacy-expert/application.py` 
+
