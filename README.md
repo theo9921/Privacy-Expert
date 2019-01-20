@@ -14,3 +14,6 @@ When faced with an extensive terms and agreements page, users can simply paste t
 The custom website was built using Flask and accepts a URL input which then is sent to a Python backend script. The script makes an API call to QnA Maker on Microsoft Cognitive Services for extracting and generating Q&A pairs from the target URL. This result is then downloaded and processed using a DeepAI text summarisation API, before being uploaded back to a Cognitive Services knowledge base.
 
 The Alexa skill uses an AWS Lambda function which processes the QuestionIntent and identifies the Q&A pair most relevant to the query.
+
+## Instructions to run
+To run the project first clone the github repository and then run the 'application.py' file
