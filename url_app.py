@@ -46,7 +46,7 @@ def index():
         url = str(url)
         print(type(url))
         form.url.data = ""
-        message = "Your URL was submitted! Please wait a couple minutes and then activate the \
+        message = "Your URL was submitted! You can now activate the \
         Privacy Expert skill by saying \"Alexa, open Privacy Expert\""
         #make a call to the azure_qna backend to update the QnA Maker Knowledge Based according to questions generated from the URL.
         alexa_service.alexa_service(url)
